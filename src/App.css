@@ -1,5 +1,5 @@
 :root{
-    --accent:rgb(0, 242, 205)
+    --accent:rgb(0, 242, 205);
 }
 
 *,
@@ -11,9 +11,34 @@
 }
 
 body{
-    background: rgb(0, 0, 0);
+    background: rgb(255, 255, 255);
 }
 
 .App{
+    width: 100%;
     padding: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.fields{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+.resume{
+    flex: 1;
+}
+
+@media(max-width:1340px){
+    .App{
+        flex-direction: column;
+    }
+    .fields{
+        width: 100%;
+    }
+    .resume{
+        width: 100%;
+    }
 }

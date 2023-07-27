@@ -27,6 +27,11 @@
 .icon{
     color: var(--accent);
     cursor: pointer;
+    transition: 200ms;
+}
+
+.icon:active{
+    transform: scale(0.8);
 }
 
 .bottomSection{
@@ -50,10 +55,24 @@
 
 .link > span{
     margin-left: 0.5rem;
+    transition: 300ms ease-in-out;
 }
 
-.link:hover{
-    color: var(--accent);
+.link:hover {
     background: #2e2e2e;
 }
 
+.link:hover span{
+    color: var(--accent);
+}
+
+.link:active{
+    transform: scale(0.9);
+}
+
+@media(max-width:1340px){
+    .HeaderBox{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
