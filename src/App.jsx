@@ -1,9 +1,10 @@
 import './App.css'
+import HeaderBox from './components/HeaderBox'
 
 function App() {
   return (
     <div className='App'>
-        <h1>hello</h1>
+      <HeaderBox />
     </div>
   )
 }

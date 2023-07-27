@@ -1,3 +1,7 @@
+:root{
+    --accent:rgb(0, 242, 205)
+}
+
 *,
 *::after,
 *::before{
@@ -7,5 +11,9 @@
 }
 
 body{
-    background: black;
+    background: rgb(0, 0, 0);
+}
+
+.App{
+    padding: 2rem;
 }
