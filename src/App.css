@@ -289,6 +289,8 @@ textarea:focus ,textarea:hover{
 .skillRow{
     display: flex;
     gap: 1rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .skillRow > input{
@@ -303,7 +305,7 @@ textarea:focus ,textarea:hover{
     transition: 300ms ease-in-out;
 }
 
-.AddBtn{
+.Btn{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -318,7 +320,7 @@ textarea:focus ,textarea:hover{
     cursor: pointer;
 }
 
-.AddBtn:hover{
+.Btn:hover{
     background: #01f351;
 }
 
@@ -326,11 +328,11 @@ textarea:focus ,textarea:hover{
     transition: 300ms ease-in-out;
 }
 
-.AddBtn:hover .AddSymbol{
+.Btn:hover .AddSymbol{
     color: black;
 }
 
-.AddBtn:active{
+.Btn:active{
     transform: scale(0.8);
 }
 

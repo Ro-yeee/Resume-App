@@ -6,6 +6,7 @@ import ExperienceForm from './components/ExperienceForm'
 import EducationForm from './components/EducationForm'
 import ContactForm from './components/ContactForm'
 import SkillsSection from './components/SkillsSection'
+import { v4 as uuidv4 } from 'uuid'
 
 function App() {
   const [data,setData] = useState({fileName: "",
@@ -51,6 +52,12 @@ function App() {
                                         name: "Link to portfolio",
                                         text: ""
                                       }
+                                    ],
+                                   skills:[
+                                      {
+                                        id : uuidv4(),
+                                        name: ""
+                                      }
                                     ]
                                   })
   
@@ -71,6 +78,15 @@ function App() {
         })
     })
   }
+
+  const addSkill = () =>{
+    setData({...data,skills : [...data.skills ,{id: uuidv4(),name: ""}]})
+    console.log(data)
+  }
+
+  const removeSkill = () =>{
+    
+  }
   
   return (
     <div className='App'>
@@ -83,7 +99,10 @@ function App() {
         <EducationForm
             data={data}
             handleData={handleData}/>
-        <SkillsSection/>
+        <SkillsSection
+            data={data}
+            addSkill={addSkill}
+            removeSkill={removeSkill}/>
         <ContactForm
             data={data}
             handleData={handleData}/>

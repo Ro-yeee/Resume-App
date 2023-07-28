@@ -1,23 +1,29 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUserGear,faPlus } from "@fortawesome/free-solid-svg-icons"
+import { faUserGear,faPlus,faTrashCan } from "@fortawesome/free-solid-svg-icons"
 
-function SkillsSection() {
+function SkillsSection({data,addSkill,removeSkill}) {
   return (
     <div className="SkillsSection">
         <h2 className="heading"> 
             <FontAwesomeIcon icon={faUserGear} className="iconNotClickable" />
             Skills
         </h2>
-        <div className="skillRow">
-            <input 
-                type="text" 
-                placeholder="Language or Techology"/>
-            <>
-            </>
-        </div>
-        <button className="AddBtn">
-            <FontAwesomeIcon icon={faPlus} size="xl" className="iconNotClickable AddSymbol"/>
-        </button>
+        {
+            data.skills.map((skill,index) =>(
+                <div className="skillRow" key={skill.id}>
+                    <input 
+                        type="text" 
+                        placeholder="Language or Techology"/>
+                    {data.skills.length > 1 && <FontAwesomeIcon onClick={removeSkill} icon={faTrashCan} size="xl" className="icon"/> }
+                </div> 
+                ))
+        }
+        {
+            data.skills.length < 12 &&
+            <button className="Btn" onClick={addSkill}>
+                <FontAwesomeIcon icon={faPlus} size="xl" className="iconNotClickable AddSymbol"/>
+            </button>
+         }  
     </div>
   )
 }
