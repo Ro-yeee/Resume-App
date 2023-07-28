@@ -2,6 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import HeaderBox from './components/HeaderBox'
 import PersonalDataForm from './components/PersonalDataForm'
+import ExperienceForm from './components/ExperienceForm'
+import EducationForm from './components/EducationForm'
+import ContactForm from './components/ContactForm'
 
 function App() {
   const [data,setData] = useState({fileName: "",
@@ -32,7 +35,7 @@ function App() {
             fileSrc: URL.createObjectURL(e.target.files[0])
           })
   }
-  
+
   const handlePersonalData = (e) =>{
     setData({...data,
       info:data.info.map(element => {
@@ -47,11 +50,13 @@ function App() {
   return (
     <div className='App'>
       <div className='fields'>
-        <HeaderBox />
+        <HeaderBox/>
         <PersonalDataForm
             data={data}
             pictureUpload={pictureUpload}
             handlePersonalData={handlePersonalData}/>
+        <EducationForm/>
+        <ContactForm/>
       </div>
       <div className='resume' id="resume">
 
