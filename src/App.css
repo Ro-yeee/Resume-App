@@ -247,11 +247,6 @@ textarea:focus ,textarea:hover{
     }
 }
 
-/* Skills Form Section */
-
-
-
-
 
 
 /* Education Form Section */
@@ -270,6 +265,77 @@ textarea:focus ,textarea:hover{
 
 @media(max-width:1340px){
     .EducationForm{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+
+/* Skills Form Section */
+
+.SkillsSection{
+    background: #1c1c1c;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 550px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skillRow{
+    display: flex;
+    gap: 1rem;
+}
+
+.skillRow > input{
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    background: #292929;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    font-size: 100%;
+    transition: 300ms ease-in-out;
+}
+
+.AddBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background: #292929;
+    color: var(--accent);
+    border-radius: 14px;
+    padding: 0.5rem;
+    width: 15%;
+    transition: 300ms ease-in-out;
+    cursor: pointer;
+}
+
+.AddBtn:hover{
+    background: #01f351;
+}
+
+.AddSymbol{
+    transition: 300ms ease-in-out;
+}
+
+.AddBtn:hover .AddSymbol{
+    color: black;
+}
+
+.AddBtn:active{
+    transform: scale(0.8);
+}
+
+@media(max-width:1340px){
+    .SkillsSection{
         width: 100%;
         margin: 0 auto;
     }

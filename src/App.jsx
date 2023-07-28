@@ -5,6 +5,7 @@ import PersonalDataForm from './components/PersonalDataForm'
 import ExperienceForm from './components/ExperienceForm'
 import EducationForm from './components/EducationForm'
 import ContactForm from './components/ContactForm'
+import SkillsSection from './components/SkillsSection'
 
 function App() {
   const [data,setData] = useState({fileName: "",
@@ -82,6 +83,7 @@ function App() {
         <EducationForm
             data={data}
             handleData={handleData}/>
+        <SkillsSection/>
         <ContactForm
             data={data}
             handleData={handleData}/>
