@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilePdf, faUserPen} from "@fortawesome/free-solid-svg-icons"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import "../componentStyles/HeaderBox.css"
 
 function HeaderBox() {
   return (

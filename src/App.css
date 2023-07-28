@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
 :root{
     --accent:rgb(0, 242, 205);
 }
@@ -40,5 +43,185 @@ body{
     }
     .resume{
         width: 100%;
+    }
+}
+
+
+/* Header Box Section */
+
+.HeaderBox{
+    background: #1c1c1c;
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 20px;
+    max-width: 550px;
+    font-family: 'Lobster', cursive;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.topSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.iconSection{
+    display: flex;
+    gap: 2rem;
+}
+
+.icon{
+    color: var(--accent);
+    cursor: pointer;
+    transition: 200ms;
+}
+
+.icon:active{
+    transform: scale(0.8);
+}
+
+.bottomSection{
+    margin: 0 auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.link{
+    outline: none;
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem 1rem;
+    background: #242424;
+    border-radius: 12px;
+    transition: 300ms ease-in-out;
+}
+
+.link > span{
+    margin-left: 0.5rem;
+    transition: 300ms ease-in-out;
+}
+
+.link:hover {
+    background: #2e2e2e;
+}
+
+.link:hover span{
+    color: var(--accent);
+}
+
+.link:active{
+    transform: scale(0.9);
+}
+
+@media(max-width:1340px){
+    .HeaderBox{
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+
+/* Personal Data Form Section */
+
+.PersonalDataForm{
+    background: #1c1c1c;
+    color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    max-width: 550px;
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.heading{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.iconNotClickable{
+    color: var(--accent);
+}
+
+.fullname{
+    display: flex;
+    gap: 1rem;
+}
+
+.fullname > input{
+    color: white;
+    width: 100%;
+    padding: 1rem;
+    background: #292929;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    font-size: 100%;
+    transition: 300ms ease-in-out;
+}
+
+input{
+    color: white;
+    padding: 1rem;
+    background: #292929;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    font-size: 100%;
+    transition: 300ms ease-in-out;
+}
+
+input:hover,input:focus{
+    background:  #2b4a49;
+}
+
+#file{
+    display: none;
+}
+
+#filepicture{
+    color: var(--accent);
+    padding: 1rem;
+    background: #292929;
+    border-radius: 14px;
+    font-size: 100%;
+    cursor: pointer;
+    width: 100%;
+    transition: 300ms ease-in-out;
+}
+
+#filepicture:hover,#filepicture:focus{
+    background: #2b4a49;
+}
+
+textarea{
+    width: 100%;
+    color: white;
+    padding: 1rem;
+    background: #292929;
+    outline: none;
+    border: none;
+    border-radius: 14px;
+    font-size: 100%;
+    font-family: inherit;
+    resize: none;
+    transition: 300ms ease-in-out;
+}
+
+textarea:focus ,textarea:hover{
+    background: #2b4a49;
+}
+
+@media(max-width:1340px){
+    .PersonalDataForm{
+        width: 100%;
+        margin: 0 auto;
     }
 }
