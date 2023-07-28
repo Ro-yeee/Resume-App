@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faAddressCard } from "@fortawesome/free-solid-svg-icons"
 
-function PersonalDataForm({data,pictureUpload,handlePersonalData}) {
+function PersonalDataForm({data,pictureUpload,handleData}) {
   let filename = null
   return (
     <div className="PersonalDataForm">
@@ -15,20 +15,20 @@ function PersonalDataForm({data,pictureUpload,handlePersonalData}) {
                 placeholder="First Name" 
                 maxLength={15}
                 value={data.info[0].text}
-                onChange={handlePersonalData}/>
+                onChange={handleData}/>
             <input 
                 type="text" 
                 placeholder="Last Name" 
                 maxLength={13} 
                 value={data.info[1].text}
-                onChange={handlePersonalData}/>
+                onChange={handleData}/>
         </div>
         <input 
             type="text" 
             placeholder="Niche: Front-End Developer" 
             maxLength={26}
             value={data.info[2].text}
-            onChange={handlePersonalData}/>
+            onChange={handleData}/>
         <label 
             htmlFor="file" 
             id="filepicture">
@@ -45,7 +45,7 @@ function PersonalDataForm({data,pictureUpload,handlePersonalData}) {
             cols="30" 
             rows="6"
             value={data.info[3].text}
-            onChange={handlePersonalData}/>
+            onChange={handleData}/>
     </div>
   )
 }

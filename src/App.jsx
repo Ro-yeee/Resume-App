@@ -25,6 +25,30 @@ function App() {
                                       {
                                         name: "Tell something about yourself to stand out from other candidates...",
                                         text: ""
+                                      },
+                                      {
+                                        name: "School",
+                                        text: ""
+                                      },
+                                      {
+                                        name: "Degree",
+                                        text: ""
+                                      },
+                                      {
+                                        name: "Address",
+                                        text: ""
+                                      },
+                                      {
+                                        name: "E-Mail",
+                                        text: ""
+                                      },
+                                      {
+                                        name: "Phone number",
+                                        text: ""
+                                      },
+                                      {
+                                        name: "Link to portfolio",
+                                        text: ""
                                       }
                                     ]
                                   })
@@ -36,7 +60,7 @@ function App() {
           })
   }
 
-  const handlePersonalData = (e) =>{
+  const handleData = (e) =>{
     setData({...data,
       info:data.info.map(element => {
           if(element.name === e.target.placeholder){
@@ -54,9 +78,13 @@ function App() {
         <PersonalDataForm
             data={data}
             pictureUpload={pictureUpload}
-            handlePersonalData={handlePersonalData}/>
-        <EducationForm/>
-        <ContactForm/>
+            handleData={handleData}/>
+        <EducationForm
+            data={data}
+            handleData={handleData}/>
+        <ContactForm
+            data={data}
+            handleData={handleData}/>
       </div>
       <div className='resume' id="resume">
 

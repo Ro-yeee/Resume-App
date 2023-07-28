@@ -307,6 +307,10 @@ textarea:focus ,textarea:hover{
     transition: 300ms ease-in-out;
 }
 
+input:hover,input:focus{
+    background:  #2b4a49;
+}
+
 @media(max-width:1340px){
     .ContactForm{
         width: 100%;
