@@ -1,17 +1,61 @@
+import { useState } from 'react'
 import './App.css'
 import HeaderBox from './components/HeaderBox'
 import PersonalDataForm from './components/PersonalDataForm'
 
 function App() {
+  const [data,setData] = useState({fileName: "",
+                                   fileSrc: "",
+                                   info:[
+                                      {
+                                        name: "First Name",
+                                        text: ""
+                                      },
+                                      {
+                                        name: "Last Name",
+                                        text: ""
+                                      },
+                                      {
+                                        name: "Niche: Front-End Developer",
+                                        text: ""
+                                      },
+                                      {
+                                        name: "Tell something about yourself to stand out from other candidates...",
+                                        text: ""
+                                      }
+                                    ]
+                                  })
+  
+  const pictureUpload = (e) =>{
+    setData({...data,
+            fileName:e.target.files[0].name,
+            fileSrc: URL.createObjectURL(e.target.files[0])
+          })
+  }
+  
+  const handlePersonalData = (e) =>{
+    setData({...data,
+      info:data.info.map(element => {
+          if(element.name === e.target.placeholder){
+            element.text = e.target.value
+          }
+            return element
+        })
+    })
+  }
+  
   return (
     <div className='App'>
       <div className='fields'>
         <HeaderBox />
-        <PersonalDataForm />
-       </div>
-       <div className='resume'>
-        
-       </div>
+        <PersonalDataForm
+            data={data}
+            pictureUpload={pictureUpload}
+            handlePersonalData={handlePersonalData}/>
+      </div>
+      <div className='resume' id="resume">
+
+      </div>
     </div>
   )
 }
