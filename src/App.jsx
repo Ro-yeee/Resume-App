@@ -56,7 +56,7 @@ function App() {
                                    skills:[
                                       {
                                         id : uuidv4(),
-                                        name: ""
+                                        text: ""
                                       }
                                     ]
                                   })
@@ -80,12 +80,11 @@ function App() {
   }
 
   const addSkill = () =>{
-    setData({...data,skills : [...data.skills ,{id: uuidv4(),name: ""}]})
-    console.log(data)
+    setData({...data,skills : [...data.skills ,{id: uuidv4(),text: ""}]})
   }
 
-  const removeSkill = () =>{
-    
+  const removeSkill = (id) =>{
+    setData({...data,skills : data.skills.filter(skill => skill.id !== id)})
   }
   
   return (
