@@ -7,6 +7,7 @@ import EducationForm from './components/EducationForm'
 import ContactForm from './components/ContactForm'
 import SkillsSection from './components/SkillsSection'
 import { v4 as uuidv4 } from 'uuid'
+import CV from './Utilities/SampleCV'
 
 function App() {
   const [data,setData] = useState({fileName: "",
@@ -95,11 +96,16 @@ function App() {
               })
     })
   }
+
+  const loadSampleCV = () =>{
+    setData(CV)
+  }
   
   return (
     <div className='App'>
       <div className='fields'>
-        <HeaderBox/>
+        <HeaderBox
+            loadSampleCV={loadSampleCV}/>
         <PersonalDataForm
             data={data}
             pictureUpload={pictureUpload}
