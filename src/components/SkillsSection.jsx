@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUserGear,faPlus,faTrashCan } from "@fortawesome/free-solid-svg-icons"
 
-function SkillsSection({data,addSkill,removeSkill}) {
+function SkillsSection({data,addSkill,removeSkill,handleSkill}) {
   return (
     <div className="SkillsSection">
         <h2 className="heading"> 
@@ -13,7 +13,9 @@ function SkillsSection({data,addSkill,removeSkill}) {
                 <div className="skillRow" key={skill.id}>
                     <input 
                         type="text" 
-                        placeholder="Language or Techology"/>
+                        placeholder="Language or Techology"
+                        value={skill.text}
+                        onChange={(e) => handleSkill(skill.id,e.target.value)}/>
                     {data.skills.length > 1 && <FontAwesomeIcon onClick={() => removeSkill(skill.id)} icon={faTrashCan} size="xl" className="icon"/> }
                 </div> 
                 ))

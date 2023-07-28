@@ -70,12 +70,11 @@ function App() {
 
   const handleData = (e) =>{
     setData({...data,
-      info:data.info.map(element => {
-          if(element.name === e.target.placeholder){
-            element.text = e.target.value
-          }
-            return element
-        })
+              info:data.info.map(element =>{
+                  if(element.name === e.target.placeholder)
+                    element.text = e.target.value
+                    return element
+                })
     })
   }
 
@@ -85,6 +84,16 @@ function App() {
 
   const removeSkill = (id) =>{
     setData({...data,skills : data.skills.filter(skill => skill.id !== id)})
+  }
+
+  const handleSkill = (id,value) =>{
+    setData({...data,
+              skills: data.skills.map(skill =>{
+                if(skill.id === id)
+                  skill.text = value
+                  return skill
+              })
+    })
   }
   
   return (
@@ -101,7 +110,8 @@ function App() {
         <SkillsSection
             data={data}
             addSkill={addSkill}
-            removeSkill={removeSkill}/>
+            removeSkill={removeSkill}
+            handleSkill={handleSkill}/>
         <ContactForm
             data={data}
             handleData={handleData}/>
