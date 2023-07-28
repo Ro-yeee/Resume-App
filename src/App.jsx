@@ -86,11 +86,11 @@ function App() {
     setData({...data,skills : data.skills.filter(skill => skill.id !== id)})
   }
 
-  const handleSkill = (id,value) =>{
+  const handleSkill = (e) =>{
     setData({...data,
               skills: data.skills.map(skill =>{
-                if(skill.id === id)
-                  skill.text = value
+                if(skill.id === e.target.id)
+                  skill.text = e.target.value
                   return skill
               })
     })

@@ -12,10 +12,11 @@ function SkillsSection({data,addSkill,removeSkill,handleSkill}) {
             data.skills.map((skill,index) =>(
                 <div className="skillRow" key={skill.id}>
                     <input 
+                        id={skill.id}
                         type="text" 
                         placeholder="Language or Techology"
                         value={skill.text}
-                        onChange={(e) => handleSkill(skill.id,e.target.value)}/>
+                        onChange={handleSkill}/>
                     {data.skills.length > 1 && <FontAwesomeIcon onClick={() => removeSkill(skill.id)} icon={faTrashCan} size="xl" className="icon"/> }
                 </div> 
                 ))
