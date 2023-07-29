@@ -54,9 +54,19 @@ function App() {
                                         text: ""
                                       }
                                     ],
+                                   experiences:[
+                                      {
+                                        id: uuidv4(),
+                                        position: "",
+                                        company: "",
+                                        startDate: "",
+                                        endDate: "",
+                                        description: ""
+                                      }
+                                    ], 
                                    skills:[
                                       {
-                                        id : uuidv4(),
+                                        id: uuidv4(),
                                         text: ""
                                       }
                                     ]
@@ -92,9 +102,33 @@ function App() {
               skills: data.skills.map(skill =>{
                 if(skill.id === e.target.id)
                   skill.text = e.target.value
-                  return skill
+                return skill
               })
     })
+  }
+
+  const addExperience = () =>{
+    setData({...data,experiences: [...data.experiences , {
+                                        id: uuidv4(),
+                                        position: "",
+                                        company: "",
+                                        startDate: "",
+                                        endDate: "",
+                                        description: ""}]})
+  }
+
+  const removeExperience = (id) =>{
+    setData({...data,experiences: data.experiences.filter(experience => experience.id !== id)})
+  }
+
+  const handleExperience = (e,id) =>{
+    console.log(id)
+    setData({...data,
+              experiences: data.experiences.map(experience =>{
+                if(experience.id === id)
+                  experience[e.target.name] = e.target.value
+                return experience
+              })})
   }
 
   const loadSampleCV = () =>{
@@ -110,7 +144,11 @@ function App() {
             data={data}
             pictureUpload={pictureUpload}
             handleData={handleData}/>
-        <ExperienceForm />
+        <ExperienceForm 
+            data={data}
+            addExperience={addExperience}
+            removeExperience={removeExperience}
+            handleExperience={handleExperience}/>
         <EducationForm
             data={data}
             handleData={handleData}/>

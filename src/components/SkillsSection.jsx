@@ -9,7 +9,7 @@ function SkillsSection({data,addSkill,removeSkill,handleSkill}) {
             Skills
         </h2>
         {
-            data.skills.map((skill,index) =>(
+            data.skills.map(skill =>(
                 <div className="skillRow" key={skill.id}>
                     <input 
                         id={skill.id}
