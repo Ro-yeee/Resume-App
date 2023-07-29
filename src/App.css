@@ -397,16 +397,19 @@ input:hover,input:focus{
     height: 29.7cm;
     width: 21cm;
     position: sticky;
-    top: 0;
+    top: 2rem;
     background: linear-gradient(to right, #76b852, #8dc26f);
     padding: 2rem 5rem;
     font-family: 'Kumbh Sans', sans-serif;
+    font-size: 15px;
+    word-spacing: 2px;
 }
 
 .ResumeTop{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
+    border-bottom: 4px solid black;
 }
 
 .Header{
@@ -440,7 +443,7 @@ input:hover,input:focus{
 
 .HeadTag > h1{
     font-family: 'Russo One', sans-serif;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .HeadTag > span{
@@ -453,10 +456,62 @@ input:hover,input:focus{
     border-radius: 20px;
     background: rgb(0, 0, 0);
     font-family: 'Pacifico', cursive;
+    max-width: 280px;
 }
 
 .ResumeTop > p{
     font-style: italic;
+    overflow-wrap: break-word;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+
+
+.ResumeMiddle{
+    margin-top: 1rem;
+    height: 550px;
+    border-bottom: 4px solid black;
+}
+
+.ResumeMiddle >h1{
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px;
+}
+
+
+
+
+
+.BottomSection{
+    margin-top: 40px;
+    display: flex;
+    gap: 40px;
+}
+
+.ColumnContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 302px;
+}
+
+.sec{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.sec > p{
+    word-break: break-all;
+}
+
+.logos{
+    background: black;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
 }
 
 @media(max-width:1340px){
