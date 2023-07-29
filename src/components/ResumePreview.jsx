@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faPhone,faEnvelope,faGlobe,faMapLocationDot } from "@fortawesome/free-solid-svg-icons"
 
-function ResumePreview({data}) {
+function ResumePreview({data,reference}) {
   return (
-    <div className="ResumePreview">
+    <div className="ResumePreview" ref={reference}>
         <div className="ResumeTop">
             <div className="Header">
                 <div className="HeadTag">

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useRef } from 'react'
 import './App.css'
 import HeaderBox from './components/HeaderBox'
 import PersonalDataForm from './components/PersonalDataForm'
@@ -9,6 +9,7 @@ import SkillsSection from './components/SkillsSection'
 import { v4 as uuidv4 } from 'uuid'
 import CV from './Utilities/SampleCV'
 import ResumePreview from './components/ResumePreview'
+import { useReactToPrint } from 'react-to-print'
 
 function App() {
   const [data,setData] = useState({fileName: "",
@@ -135,12 +136,16 @@ function App() {
   const loadSampleCV = () =>{
     setData(CV)
   }
-  
+
+  const componentRef = useRef()
+  const handlePrint = useReactToPrint({ content: () => componentRef.current,documentTitle:"Resume", pageStyle:"print" })
+
   return (
     <div className='App'>
       <div className='fields'>
         <HeaderBox
-            loadSampleCV={loadSampleCV}/>
+            loadSampleCV={loadSampleCV}
+            handlePrint={handlePrint}/>
         <PersonalDataForm
             data={data}
             pictureUpload={pictureUpload}
@@ -164,7 +169,8 @@ function App() {
       </div>
       <div className='resume' id="resume">
         <ResumePreview
-            data={data}/>
+            data={data}
+            reference={componentRef}/>
       </div>
     </div>
   )
