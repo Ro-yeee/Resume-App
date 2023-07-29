@@ -110,6 +110,7 @@ function App() {
             data={data}
             pictureUpload={pictureUpload}
             handleData={handleData}/>
+        <ExperienceForm />
         <EducationForm
             data={data}
             handleData={handleData}/>
