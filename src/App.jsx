@@ -8,6 +8,7 @@ import ContactForm from './components/ContactForm'
 import SkillsSection from './components/SkillsSection'
 import { v4 as uuidv4 } from 'uuid'
 import CV from './Utilities/SampleCV'
+import ResumePreview from './components/ResumePreview'
 
 function App() {
   const [data,setData] = useState({fileName: "",
@@ -162,7 +163,8 @@ function App() {
             handleData={handleData}/>
       </div>
       <div className='resume' id="resume">
-
+        <ResumePreview
+            data={data}/>
       </div>
     </div>
   )
