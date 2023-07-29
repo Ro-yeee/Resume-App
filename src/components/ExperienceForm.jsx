@@ -58,8 +58,8 @@ function ExperienceForm({data,addExperience,removeExperience,handleExperience}) 
         }
         {
           data.experiences.length < 2 &&
-          <button className="Btn">
-                <FontAwesomeIcon icon={faPlus} onClick={addExperience} size="xl" className="iconNotClickable AddSymbol"/>
+          <button className="Btn" onClick={addExperience} >
+                <FontAwesomeIcon icon={faPlus} size="xl" className="iconNotClickable AddSymbol"/>
           </button>   
         } 
     </div>
