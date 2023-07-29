@@ -72,7 +72,26 @@ const CV = {
             id : uuidv4(),
             text: "Git"
         }
-    ]
+    ],
+    experiences:[
+        {
+            id: uuidv4(),
+            position: "Senior Software Engineer",
+            company: "Dice",
+            startDate: "2016",
+            endDate: "Present",
+            description: "I provided technical leadership for complex projects. I used the latest technologies such as Cloud Service, Visual Studio 2019 and Azure DevOps. I gained experience with data technologies such as SQL Servers, NoSQL databases, full text search engines and caching. My daily work consisted mostly of maintaining full project life-cycle tasks including testing, debugging, technical analysis, design and coding."
+        }, 
+        {
+            id: uuidv4(),
+            position: "Software Engineer",
+            company: "Rose International",
+            startDate: "2014",
+            endDate: "2016",
+            description: "I worked on the company's software development plans including all aspects of the SDLC in collaboration with peer programmers. My daily workflow here consisted of performing error analysis, assisting with IT issues and building/accessing databases including NoSQL and Node.js. I, together with my team of peers, developed 25+ Java Applications in the time of my employment."
+        }   
+     ]
+   
 }
 
 export default CV
