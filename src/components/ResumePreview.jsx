@@ -7,7 +7,7 @@ function ResumePreview({data,reference}) {
         <div className="ResumeTop">
             <div className="Header">
                 <div className="HeadTag">
-                    <h1>{data.info[0].text} {data.info[1].text}</h1>
+                    <h1>{data.info[0].text.toUpperCase()} {data.info[1].text.toUpperCase()}</h1>
                     <span>
                         {data.info[2].text}
                     </span>
@@ -33,12 +33,12 @@ function ResumePreview({data,reference}) {
             </div>
             <div className="educationSkills">
                 <div className="educationContainer">
-                    <h1>Education</h1>
+                    <h1 className="head">Education</h1>
                     <h3>{data.info[4].text}</h3>
                     <p>{data.info[5].text}</p>
                 </div>
                 <div className="skillsContainer">
-                    <h1>Skills</h1>
+                    <h1 className="head">Skills</h1>
                     <div className="skillGrid">
                         {
                             data.skills.map(skill => <p className="list" key={skill.id}>{skill.text}</p>)

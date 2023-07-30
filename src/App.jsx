@@ -13,8 +13,8 @@ import { useReactToPrint } from 'react-to-print'
 import Gradient from './components/Gradient'
 
 function App() {
-  const [data,setData] = useState({color1: "#26a793",
-                                   color2: "#3ac83e",
+  const [data,setData] = useState({color1: "rgb(91, 205, 188)",
+                                   color2: "rgb(100, 227, 104",
                                    fileName: "",
                                    fileSrc: "",
                                    info:[

@@ -17,7 +17,8 @@ function Gradient({data,getColor1,getColor2}) {
                     id="color1"
                     type="color" 
                     className="color"
-                    onChange={getColor1}/>
+                    onChange={getColor1}
+                    value={data.color1}/>
             </label>
             <label 
                 htmlFor="color2" 
@@ -27,7 +28,8 @@ function Gradient({data,getColor1,getColor2}) {
                     id="color2"
                     type="color" 
                     className="color"
-                    onChange={getColor2}/>
+                    onChange={getColor2}
+                    value={data.color2}/>
             </label>
         </div>
     </div>
