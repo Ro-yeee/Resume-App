@@ -20,13 +20,16 @@ function ResumePreview({data,reference}) {
         </div>
         <div className="ResumeMiddle">
             <h1>Experience</h1>
-            <div className="experienceContainer">
-                <div className="experience">
-                    <p>{data.experiences[0].position}</p>
-                </div>
-                <div className="experience">
-
-                </div>
+            <div className="experiences">
+                {
+                    data.experiences.map(element =>(
+                        <div className="experienceContainer">
+                            <h3>{element.position}</h3>
+                            <p>{element.company} | {element.startDate} - {element.endDate}</p>
+                            <p className="workDescription">{element.description}</p>
+                        </div>
+                    ))
+                }
             </div>
         </div>
         <div className="BottomSection">

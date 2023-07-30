@@ -139,8 +139,7 @@ function App() {
 
   const componentRef = useRef()
   const handlePrint = useReactToPrint({ content: () => componentRef.current,
-                                        documentTitle: `${data.info[0].text}'s Resume`,
-                                        pageStyle:"print"})
+                                        documentTitle: `${data.info[0].text}'s Resume`})
 
   return (
     <div className='App'>

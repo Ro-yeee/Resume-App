@@ -469,10 +469,13 @@ input:hover,input:focus{
 
 
 
+
 .ResumeMiddle{
     margin-top: 1rem;
-    height: 550px;
     border-bottom: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .ResumeMiddle >h1{
@@ -480,6 +483,21 @@ input:hover,input:focus{
     font-size: 30px;
 }
 
+.experiences{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.experienceContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.workDescription{
+    margin-bottom: 20px;
+}
 
 
 
@@ -530,49 +548,50 @@ input:hover,input:focus{
     .ResumePreview{
         flex-shrink: 0;
         transform:  scale(0.9);
-        margin-top: -40px;
+        margin: -40px 0px;
+        
     }
 }
 
 @media(max-width:790px){
     .ResumePreview{
         transform:  scale(0.8);
-        margin-top: -100px;
+        margin: -100px 0px;
     }
 }
 
 @media(max-width:710px){
     .ResumePreview{
         transform:  scale(0.7);
-        margin-top: -160px;
+        margin: -160px 0px;
     }
 }
 
 @media(max-width:630px){
     .ResumePreview{
         transform:  scale(0.6);
-        margin-top: -220px;
+        margin: -220px 0px;
     }
 }
 
 @media(max-width:548px){
     .ResumePreview{
         transform:  scale(0.5);
-        margin-top: -280px;
+        margin: -280px 0px;
     }
 }
 
 @media(max-width:460px){
     .ResumePreview{
         transform:  scale(0.4);
-        margin-top: -340px;
+        margin: -340px 0px;
     }
 }
 
 @media(max-width:370px){
     .ResumePreview{
         transform:  scale(0.35);
-        margin-top: -370px;
+        margin: -370px 0px;
     }
 }
 
