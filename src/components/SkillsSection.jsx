@@ -16,7 +16,8 @@ function SkillsSection({data,addSkill,removeSkill,handleSkill}) {
                         type="text" 
                         placeholder="Language or Techology"
                         value={skill.text}
-                        onChange={handleSkill}/>
+                        onChange={handleSkill}
+                        maxLength={20}/>
                     {data.skills.length > 1 && <FontAwesomeIcon onClick={() => removeSkill(skill.id)} icon={faTrashCan} size="xl" className="icon"/> }
                 </div> 
                 ))

@@ -79,6 +79,7 @@ function App() {
             fileName:e.target.files[0].name,
             fileSrc: URL.createObjectURL(e.target.files[0])
           })
+    e.target.value = ""
   }
 
   const handleData = (e) =>{
@@ -133,8 +134,9 @@ function App() {
               })})
   }
 
-  const loadSampleCV = () =>{
+  const loadSampleCV = (e) =>{
     setData(CV)
+    e = ""
   }
 
   const componentRef = useRef()
