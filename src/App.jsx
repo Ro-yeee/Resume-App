@@ -10,9 +10,12 @@ import { v4 as uuidv4 } from 'uuid'
 import CV from './Utilities/SampleCV'
 import ResumePreview from './components/ResumePreview'
 import { useReactToPrint } from 'react-to-print'
+import Gradient from './components/Gradient'
 
 function App() {
-  const [data,setData] = useState({fileName: "",
+  const [data,setData] = useState({color1: "#26a793",
+                                   color2: "#3ac83e",
+                                   fileName: "",
                                    fileSrc: "",
                                    info:[
                                       {
@@ -139,6 +142,14 @@ function App() {
     e = ""
   }
 
+  const getColor1 = (e) =>{
+    setData({...data,color1:e.target.value})
+  }
+
+  const getColor2 = (e) =>{
+    setData({...data,color2:e.target.value})
+  }
+
   const componentRef = useRef()
   const handlePrint = useReactToPrint({ content: () => componentRef.current,
                                         documentTitle: `${data.info[0].text}'s Resume`})
@@ -149,6 +160,10 @@ function App() {
         <HeaderBox
             loadSampleCV={loadSampleCV}
             handlePrint={handlePrint}/>
+        <Gradient
+            data={data}
+            getColor1={getColor1}
+            getColor2={getColor2}/>
         <PersonalDataForm
             data={data}
             pictureUpload={pictureUpload}

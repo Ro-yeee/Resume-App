@@ -3,7 +3,7 @@ import { faPhone,faEnvelope,faGlobe,faMapLocationDot } from "@fortawesome/free-s
 
 function ResumePreview({data,reference}) {
   return (
-    <div className="ResumePreview" ref={reference}>
+    <div className="ResumePreview" ref={reference} style={{background:`linear-gradient(to right, ${data.color1}, ${data.color2})`}}>
         <div className="ResumeTop">
             <div className="Header">
                 <div className="HeadTag">

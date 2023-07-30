@@ -2,6 +2,8 @@ import { v4 as uuidv4 } from "uuid";
 import samplePicture from "./example.png"
 
 const CV = {
+    color1: " #26a793",
+    color2: "#3ac83e",
     fileName: "example_pic.png",
     fileSrc: samplePicture,
     info:[
