@@ -234,6 +234,7 @@ input:hover,input:focus{
     cursor: pointer;
     width: 100%;
     transition: 300ms ease-in-out;
+    word-break: break-word;
 }
 
 #filepicture:hover,#filepicture:focus{
