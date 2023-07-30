@@ -506,7 +506,7 @@ input:hover,input:focus{
 
 .ResumeTop > p{
     font-style: italic;
-    overflow-wrap: break-word;
+    overflow-wrap: break-all;
     margin-bottom: 20px;
     line-height: 1.1;
 }
