@@ -6,7 +6,7 @@ function HeaderBox({loadSampleCV,handlePrint}) {
   return (
     <div className="HeaderBox">
       <div className="topSection">
-        <h1>CV Maker</h1>
+        <h1>Resume.io</h1>
         <div className="iconSection">
           <FontAwesomeIcon onClick={handlePrint} icon={faFilePdf} size="xl" className="icon" />
           <FontAwesomeIcon onClick={loadSampleCV} icon={faUserPen} size="xl" className="icon" />

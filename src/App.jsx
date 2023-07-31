@@ -12,6 +12,8 @@ import ResumePreview from './components/ResumePreview'
 import { useReactToPrint } from 'react-to-print'
 import Gradient from './components/Gradient'
 
+console.log
+
 function App() {
   const [data,setData] = useState({color1: "rgb(91, 205, 188)",
                                    color2: "rgb(100, 227, 104",
@@ -128,7 +130,6 @@ function App() {
   }
 
   const handleExperience = (e,id) =>{
-    console.log(id)
     setData({...data,
               experiences: data.experiences.map(experience =>{
                 if(experience.id === id)
